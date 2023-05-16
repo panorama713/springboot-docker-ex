@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @RestController
 public class WebhookController {
@@ -16,7 +17,7 @@ public class WebhookController {
     @RequestMapping(value = { "/send-webhook", "/send-webhook/" }, method = { RequestMethod.GET, RequestMethod.POST })
     public String sendWebhook() {
         String webhookUrl = "https://discord.com/api/webhooks/1090549186040184913/_nVKm8TfNkMjjZDz2lgNqbVQBmciLcgii6trO7nXIEz7LAtMHVRBXkSVwoSd-nYRGxzU";
-        String message = LocalDate.now().toString();
+        String message = LocalDateTime.now().toString();
         String name = "저는 아직 취업하기는 글렀습니다."; // 원하는 이름으로 변경
 
         HttpHeaders headers = new HttpHeaders();
