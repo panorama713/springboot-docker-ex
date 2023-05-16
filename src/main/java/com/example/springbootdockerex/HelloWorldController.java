@@ -27,17 +27,4 @@ public class HelloWorldController {
     public String hello() {
         return "Hello World!";
     }
-
-    @RequestMapping("/send-webhook")
-    public String sendWebhook() {
-        String webhookUrl = "https://discord.com/api/webhooks/1090549186040184913/_nVKm8TfNkMjjZDz2lgNqbVQBmciLcgii6trO7nXIEz7LAtMHVRBXkSVwoSd-nYRGxzU";
-        String hostname = String.valueOf(LocalDate.now());
-
-        String jsonPayload = String.format("{\"content\": \"Hello, world!\", \"name\": \"%s\"}", hostname);
-
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForObject(webhookUrl, jsonPayload, String.class);
-
-        return "Webhook sent successfully";
-    }
 }
