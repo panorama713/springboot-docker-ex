@@ -23,7 +23,7 @@ import static org.springframework.http.HttpHeaders.DATE;
  */
 @RestController
 public class HelloWorldController {
-    @GetMapping("/")
+    @GetMapping("/H")
     public String hello() {
         return "Hello World!";
     }
