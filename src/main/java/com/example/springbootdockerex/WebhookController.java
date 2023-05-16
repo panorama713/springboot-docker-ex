@@ -1,3 +1,5 @@
+package com.example.springbootdockerex;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
